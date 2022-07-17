@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>Update User</h1>
+    <br>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <h5>Basic Info</h5>
+                {% csrf_token %}
+                {{ form.as_p }}
+            </div>
+            <div class="col-6">
+                <h5>Additional Info</h5>
+                {% csrf_token %}
+                {{ additional_form.as_p }}
+            </div>
+
+        </div>
+        <center>
+            <button class="btn btn-success" type="submit">Update</button>
+        </center>
+    </form>
+</div>
+
+
+{% endblock %}
